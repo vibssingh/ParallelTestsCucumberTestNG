@@ -1,6 +1,12 @@
 # ParallelTestsCucumberTestNG
 This framework execute the Cucumber Tests using parallely. This framework also generates Extent Report.
 
+The complete tutorial can be found here  
+```
+https://qaautomation.expert/2021/07/02/parallel-testing-in-cucumber-with-testng/
+```
+
+
 Cucumber tests can be exectued in parallel using TestNG and Maven test execution plugins.
 
 TestNG run  the scenarios in parallelly. 
@@ -32,4 +38,8 @@ public Object[][] scenarios() {
     
 3. Run the following cmd in terminal to run the feature files in parallel  
 ```mvn clean test```
+
+4. TestNG Report will be generated in ***target->surefire-report*** folder
+
+5. Extent Report will be generated in folder ***ExtentReports->SparkReport_DD_MMM_YY->Reports->Spark.html***
 
