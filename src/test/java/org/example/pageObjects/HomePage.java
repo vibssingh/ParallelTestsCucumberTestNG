@@ -11,7 +11,7 @@ public class HomePage {
         this.driver = driver;
     }
 
-    By homePageUserName = By.xpath("//*[@id='app']/div[1]/div[1]/header/div[1]/div[1]/span/h6");
+    By homePageUserName = By.xpath("//*[@class='oxd-topbar-header-breadcrumb']/h6");
 
     public String getHomePageText() {
         return driver.findElement(homePageUserName).getText();

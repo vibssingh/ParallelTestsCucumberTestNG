@@ -1,10 +1,12 @@
 package org.example.utils;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -25,14 +27,14 @@ public class BaseTest {
 
         if (driver == null) {
             if (prop.getProperty("browser").equalsIgnoreCase("chrome")) {
-                WebDriverManager.chromedriver().setup();
-                driver = new ChromeDriver();
+                ChromeOptions options = new ChromeOptions();
+                driver = new ChromeDriver(options);
             } else if (prop.getProperty("browser").equalsIgnoreCase("firefox")) {
-                WebDriverManager.firefoxdriver().setup();
-                driver = new FirefoxDriver();
+                FirefoxOptions options = new FirefoxOptions();
+                driver = new FirefoxDriver(options);
             } else if (prop.getProperty("browser").equalsIgnoreCase("edge")) {
-                WebDriverManager.edgedriver().setup();
-                driver = new EdgeDriver();
+                EdgeOptions options = new EdgeOptions();
+                driver = new EdgeDriver(options);
             } else {
                 System.out.println("No Browser is provided");
             }

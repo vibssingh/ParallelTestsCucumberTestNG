@@ -10,7 +10,7 @@ public class LoginPage {
     By userName = By.name("username");
     By passWord = By.name("password");
     By login = By.xpath("//*[@id='app']/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button");
-    By errorMessage = By.xpath("//*[@id='app']/div[1]/div/div[1]/div/div[2]/div[2]/div/div[1]/div[1]/p");
+    By errorMessage = By.xpath("//*[@class='orangehrm-login-error']/div[1]/div[1]/p");
     By forgotPasswordLink = By.xpath("//*[@id='app']/div[1]/div/div[1]/div/div[2]/div[2]/form/div[4]/p");
     By loginPageTitle = By.xpath("//*[@id='app']/div[1]/div/div[1]/div/div[2]/h5");
 
